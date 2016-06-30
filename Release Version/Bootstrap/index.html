@@ -11,7 +11,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
-	<script src="js/modernizr.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
 	<!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
@@ -19,11 +21,11 @@
 
 </head>
 <body>
-	
+</div>
 	<!-- ====================================================
 	header section -->
 	<header class="top-header">
-		<div class="container">
+		<div class="container" ng-app="anchorScroll">
 			<div class="row">
 				<div class="col-xs-5 header-logo">
 					<br>
@@ -47,14 +49,14 @@
 					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="NavController" style="width: 900px">
 					      
 					      <ul class="nav navbar-nav navbar-right">
-					        <li ng-class="{ active: isActive('#')}"><a class="menu active" href="#home" >Home</a></li>
-							<li ng-class="{ active: isActive('#about')}"><a class="menu" href="#about" >About us</a></li>
-					        <li ng-class="{ active: isActive('#products')}"><a class="menu" href="#products">Products</a></li>
-					        <li ng-class="{ active: isActive('#services')}"><a class="menu" href="#services">Services</a></li>
-					        <li ng-class="{ active: isActive('#links')}"><a class="menu" href="#links">Health Links</a></li>
-					        <li ng-class="{ active: isActive('#events')}"><a class="menu" href="#events">Events</a></li>
-                            <li ng-class="{ active: isActive('#contact')}"><a class="menu" href="#contact">Contact Us</a></li>
-                            <li ng-class="{ active: isActive('#feedback')}"><a class="menu" href="#feedback">Feedback</a></li>
+					        <li><a class="menu active" href="" ng-click="gotoAnchor(1)">Home</a></li>
+							<li><a class="menu" href="" ng-click="gotoAnchor(2)">About us</a></li>
+					        <li><a class="menu" href="" ng-click="gotoAnchor(3)">Products</a></li>
+					        <li><a class="menu" href="" ng-click="gotoAnchor(4)">Services</a></li>
+					        <li><a class="menu" href="" ng-click="gotoAnchor(5)">Health Links</a></li>
+					        <li><a class="menu" href="" ng-click="gotoAnchor(6)">Events</a></li>
+                            <li><a class="menu" href="" ng-click="gotoAnchor(7)">Contact Us</a></li>
+                            <li><a class="menu" href="" ng-click="gotoAnchor(8)">Feedback</a></li>
 					      </ul>
 					    </div><!-- /navbar-collapse -->
 					  </div><!-- / .container-fluid -->
@@ -64,7 +66,7 @@
 		</div>
 	</header> <!-- end of header area -->
 
-	<section class="slider" id="home">
+	<section class="slider" id="anchor1">
 		<div class="container-fluid">
 			<div class="row">
 			    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
@@ -119,7 +121,7 @@
 	</section><!-- end of slider section -->
 
 	<!-- about section -->
-	<section class="about text-center" id="about">
+	<section class="about text-center" id="anchor2">
 		<div class="container">
 			<div class="row">
 				<h2>About Us</h2>
@@ -175,7 +177,7 @@
 	</section><!-- end of about section -->
 	
 	<!-- products section -->
-	<section class="about text-center" id="products">
+	<section class="about text-center" id="anchor3">
 		<div class="container">
 			<div class="row">
 				<h2>Our Products</h2>                
@@ -225,7 +227,7 @@
 
 
 	<!-- service section starts here -->
-	<section class="service text-center" id="service">
+	<section class="service text-center" id="anchor4">
 		<div class="container">
 			<div class="row">
 				<h2>Our services</h2>
@@ -316,7 +318,7 @@
 
 
 	<!-- team section -->
-	<section class="team" id="team">
+	<section class="team" id="anchor5">
 		<div class="container">
 			<div class="row">
 				<div class="team-heading text-center">
@@ -388,7 +390,7 @@
 	</section><!-- end of team section -->
 
 	<!-- map section -->
-	<div class="api-map" id="contact">
+	<div class="api-map" id="anchor6">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12 map" id="map"></div>

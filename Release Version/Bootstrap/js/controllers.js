@@ -1,7 +1,28 @@
-function NavController($scope, $location)
+angular.module("anchorScroll",[])
+.run(['$anchorScroll', function($anchorScroll)
 {
-	$scope.isActive = function (viewLocation)
+	$anchorScroll.yOffset = 50;
+}])
+
+angular.module('anchorScroll', [])
+.run(['$anchorScroll', function($anchorScroll)
+{
+	$anchorScroll.yOffset = 50;
+}])
+.controller('NavController', ['$anchorScroll', '$location', '$scope',
+	function($anchorScroll, $location, $scope)
 	{
-		return viewLocation === $location.path();
-	};
-}
+		$scope.gotoAnchor = function(x)
+		{
+			var newHash = 'anchor' + x;
+			if($location.hash() !== newHash)
+			{
+				$location.hash('anchor' + x);
+			}
+			else
+			{
+				$anchorScroll();
+			}
+		};
+	}
+]);
