@@ -44,16 +44,17 @@
 					    </div>
 
 					    <!-- Collect the nav links, forms, and other content for toggling -->
-					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="NavController" style="width: 900px">
 					      
 					      <ul class="nav navbar-nav navbar-right">
-					        <li><a class="menu active" href="#home" >Home</a></li>
-					        <li><a class="menu" href="#products">Products</a></li>
-					        <li><a class="menu" href="#services">Services</a></li>
-					        <li><a class="menu" href="#links">Health Links</a></li>
-					        <li><a class="menu" href="#events">Events</a></li>
-                            <li><a class="menu" href="#contact">Contact Us</a></li>
-                            <li><a class="menu" href="#feedback">Feedback</a></li>
+					        <li ng-class="{ active: isActive('#')}"><a class="menu active" href="#home" >Home</a></li>
+							<li ng-class="{ active: isActive('#about')}"><a class="menu" href="#about" >About us</a></li>
+					        <li ng-class="{ active: isActive('#products')}"><a class="menu" href="#products">Products</a></li>
+					        <li ng-class="{ active: isActive('#services')}"><a class="menu" href="#services">Services</a></li>
+					        <li ng-class="{ active: isActive('#links')}"><a class="menu" href="#links">Health Links</a></li>
+					        <li ng-class="{ active: isActive('#events')}"><a class="menu" href="#events">Events</a></li>
+                            <li ng-class="{ active: isActive('#contact')}"><a class="menu" href="#contact">Contact Us</a></li>
+                            <li ng-class="{ active: isActive('#feedback')}"><a class="menu" href="#feedback">Feedback</a></li>
 					      </ul>
 					    </div><!-- /navbar-collapse -->
 					  </div><!-- / .container-fluid -->
@@ -172,6 +173,55 @@
 			</div>
 		</div>
 	</section><!-- end of about section -->
+	
+	<!-- products section -->
+	<section class="about text-center" id="products">
+		<div class="container">
+			<div class="row">
+				<h2>Our Products</h2>                
+				<div class="col-md-4 col-sm-6">
+					<h3>Medical Graduated Compression Stockings</h3>
+					<ul>
+						<li>25 - 60mm compression</li>
+						<li>Knee length</li>
+						<li>Thigh length</li>
+						<li>Pantyhose</li>
+						<li>Maternity pantyhose</li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Support Stockings</h3>
+					<ul>
+						<li>Off the shelf</li>
+						<li>12 - 25mm compression</li>						
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>T.E.D. Stockings</h3>
+					<ul>
+						<li>For bedridden patients</li>						
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Post-operative Compression Garments</h3>
+					<ul>
+						<li>Mammary</li>
+						<li>Plastic surgery</li>
+						<li>Post partum and post surgical</li>						
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Mastectomy</h3>
+					<ul>
+						<li>Brassieres</li>
+						<li>Breast Prosthesis</li>
+						<li>Fitting Accessories</li>
+						<li>Lymphadema Sleeve</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of products section -->
 
 
 	<!-- service section starts here -->
