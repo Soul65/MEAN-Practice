@@ -1,0 +1,28 @@
+{
+  "name": "nodetaskapp",
+  "version": "1.0.0",
+  "description": "Node.js and MySQL app",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"echo\\\"Error: no test specified\\\"&& exit\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgokhe/Node.JS-MySQL.git"
+  },
+  "keywords": [
+    "Sid",
+    "MySQL",
+    "NodeJS"
+  ],
+  "author": "Siddharth Gokhe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgokhe/Node.JS-MySQL/issues"
+  },
+  "homepage": "https://github.com/sgokhe/Node.JS-MySQL#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "express": "^4.14.0"
+  }
+}
