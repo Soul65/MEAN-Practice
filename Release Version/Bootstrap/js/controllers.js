@@ -1,9 +1,3 @@
-angular.module("anchorScroll",[])
-.run(['$anchorScroll', function($anchorScroll)
-{
-	$anchorScroll.yOffset = 50;
-}])
-
 angular.module('anchorScroll', [])
 .run(['$anchorScroll', function($anchorScroll)
 {
@@ -26,3 +20,11 @@ angular.module('anchorScroll', [])
 		};
 	}
 ]);
+
+app.controller("ProductsCtrl", function($scope)
+{
+	$scope.products = 
+	[{
+		
+	}];
+});
