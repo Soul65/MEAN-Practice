@@ -23,8 +23,6 @@ angular.module('anchorScroll', [])
 
 app.controller("ProductsCtrl", function($scope)
 {
-	$scope.products = 
-	[{
-		
-	}];
+	$scope.products = [{}];
+	$scope.productShow = '';
 });

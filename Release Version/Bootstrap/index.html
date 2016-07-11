@@ -170,7 +170,8 @@
 			<div class="row">
 				<h2>Our Products</h2>
 				<div ng-controller="ProductsCtrl">
-					<select class="form-control" style="font-size: 20px; height: 50px">
+					<select class="form-control" style="font-size: 20px; height: 50px" 
+					ng-model="products" ng-options="product.name for product in products">
 						<option value="Compression">Compression Therapy</option>
 						<option value="Diabetic">Diagnostics / Diabetic Supplies</option>
 						<option value="Mobility">Mobility Aids</option>
@@ -179,47 +180,49 @@
 						<option value="Bath">Bath Safety</option>
 						<option value="DailyLiving">Daily Living Aids</option>
 					</select>
+					<div ng-show="productShow=='Compression'">
+						<div class="col-md-4 col-sm-4">					
+							<ul class="list-group">
+								<h3>Medical Graduated Compression Stockings</h3>
+								<li class="list-group-item" style="font-size: 20px">25 - 60mm compression</li>
+								<li class="list-group-item" style="font-size: 20px">Knee length</li>
+								<li class="list-group-item" style="font-size: 20px">Thigh length</li>
+								<li class="list-group-item" style="font-size: 20px">Pantyhose</li>
+								<li class="list-group-item" style="font-size: 20px">Maternity pantyhose</li>
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4">					
+							<ul>
+								<h3>Mastectomy</h3>
+								<li class="list-group-item" style="font-size: 20px">Brassieres</li>
+								<li class="list-group-item" style="font-size: 20px">Breast Prosthesis</li>
+								<li class="list-group-item" style="font-size: 20px">Fitting Accessories</li>
+								<li class="list-group-item" style="font-size: 20px">Lymphadema Sleeve</li>						
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4">					
+							<ul>
+								<h3>Support Stockings</h3>
+								<li class="list-group-item" style="font-size: 20px">Off the shelf</li>
+								<li class="list-group-item" style="font-size: 20px">12 - 25mm compression</li>						
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4">					
+							<ul>
+								<h3>T.E.D. Stockings</h3>
+								<li class="list-group-item" style="font-size: 20px">For bedridden patients</li>						
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-4">					
+							<ul>
+								<h3>Post-operative Compression Garments</h3>
+								<li class="list-group-item" style="font-size: 20px">Mammary</li>
+								<li class="list-group-item" style="font-size: 20px">Plastic surgery</li>
+								<li class="list-group-item" style="font-size: 20px">Post partum and post surgical</li>						
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-6 col-sm-4">
-					<h3>Medical Graduated Compression Stockings</h3>
-					<ul class="list-group">
-						<li class="list-group-item" style="font-size: 20px">25 - 60mm compression</li>
-						<li class="list-group-item" style="font-size: 20px">Knee length</li>
-						<li class="list-group-item" style="font-size: 20px">Thigh length</li>
-						<li class="list-group-item" style="font-size: 20px">Pantyhose</li>
-						<li class="list-group-item" style="font-size: 20px">Maternity pantyhose</li>
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<h3>Mastectomy</h3>
-					<ul>
-						<li class="list-group-item" style="font-size: 20px">Brassieres</li>
-						<li class="list-group-item" style="font-size: 20px">Breast Prosthesis</li>
-						<li class="list-group-item" style="font-size: 20px">Fitting Accessories</li>
-						<li class="list-group-item" style="font-size: 20px">Lymphadema Sleeve</li>						
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<h3>Support Stockings</h3>
-					<ul>
-						<li class="list-group-item" style="font-size: 20px">Off the shelf</li>
-						<li class="list-group-item" style="font-size: 20px">12 - 25mm compression</li>						
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<h3>T.E.D. Stockings</h3>
-					<ul>
-						<li class="list-group-item" style="font-size: 20px">For bedridden patients</li>						
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-4">
-					<h3>Post-operative Compression Garments</h3>
-					<ul>
-						<li class="list-group-item" style="font-size: 20px">Mammary</li>
-						<li class="list-group-item" style="font-size: 20px">Plastic surgery</li>
-						<li class="list-group-item" style="font-size: 20px">Post partum and post surgical</li>						
-					</ul>
-				</div>				
 			</div>
 		</div>
 	</section><!-- end of products section -->
