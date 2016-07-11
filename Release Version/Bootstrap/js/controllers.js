@@ -23,6 +23,8 @@ angular.module('anchorScroll', [])
 
 app.controller("ProductsCtrl", function($scope)
 {
-	$scope.products = [{}];
+	$scope.products = ['Compression Therapy', 'Diagnostics / Diabetic Supplies',
+	'Mobility Aids', 'Incontinent / Ostomy Supplies', 'Orthopedic Supports', 
+	'Bath Safety', 'Daily Living Aids'];
 	$scope.productShow = '';
 });

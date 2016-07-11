@@ -171,16 +171,9 @@
 				<h2>Our Products</h2>
 				<div ng-controller="ProductsCtrl">
 					<select class="form-control" style="font-size: 20px; height: 50px" 
-					ng-model="products" ng-options="product.name for product in products">
-						<option value="Compression">Compression Therapy</option>
-						<option value="Diabetic">Diagnostics / Diabetic Supplies</option>
-						<option value="Mobility">Mobility Aids</option>
-						<option value="Ostomy">Incontinent / Ostomy Supplies</option>
-						<option value="Orthopedic">Orthopedic Supports</option>
-						<option value="Bath">Bath Safety</option>
-						<option value="DailyLiving">Daily Living Aids</option>
+					ng-model="selectedProduct" ng-options="product for product in products">
 					</select>
-					<div ng-show="productShow=='Compression'">
+					<div ng-show="productShow=='0'">
 						<div class="col-md-4 col-sm-4">					
 							<ul class="list-group">
 								<h3>Medical Graduated Compression Stockings</h3>
