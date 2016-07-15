@@ -103,7 +103,7 @@
 							<div class="about-img">
 								<img class="img-responsive" src="img/item1.jpg" alt="">
 							</div>
-							<div class="about-details">
+							<div class="about-details" style="height: 188px">
 								<div class="pentagon-text">
 									<i class="fa fa-heartbeat" style="font-size: 40px; line-height: 1.3"  aria-hidden="true"></i>
 								</div>
@@ -117,7 +117,7 @@
 							<div class="about-img">
 								<img class="img-responsive" src="img/item2.jpg" alt="">
 							</div>
-							<div class="about-details">
+							<div class="about-details" style="height: 188px">
 								<div class="pentagon-text">
 									<span class="fa-stack fa-lg" style="width: 40px">
 										<i class="fa fa-clock-o fa-stack-1x" style="font-size: 40px; line-height: 1.3; padding-right: 30px"  aria-hidden="true"></i>
@@ -134,7 +134,7 @@
 							<div class="about-img">
 								<img class="img-responsive" src="img/item3.jpg" alt="">
 							</div>
-							<div class="about-details">
+							<div class="about-details" style="height: 188px">
 								<div class="pentagon-text">
 									<i class="fa fa-wrench" style="font-size: 40px; line-height: 1.3"  aria-hidden="true"></i>
 								</div>
@@ -154,6 +154,7 @@
 					<h2>Our Products</h2>
 					<div ng-controller="ProductsCtrl">
 						<select class="form-control" style="font-size: 20px; height: 50px" 
+							ng-init="selectedProduct = products[0]"
 							ng-model="selectedProduct"
 							ng-options="product.name for product in products track by product.id">
 						</select>
@@ -200,9 +201,9 @@
 							</div>
 						</div>
 						<div ng-show="selectedProduct.id==2">
-							<div class="col-md-100 col-sm-100">					
-								<ul class="list-group">
-									<h3>Supplies</h3>
+							<h3 style="padding-left: 40px">Supplies</h3>
+							<div class="col-md-6 col-sm-6">					
+								<ul class="list-group">									
 									<li class="list-group-item" style="font-size: 20px">Blood Presure</li>
 									<li class="list-group-item" style="font-size: 20px">Monitors</li>
 									<li class="list-group-item" style="font-size: 20px">Thermometers</li>
@@ -214,6 +215,10 @@
 									<li class="list-group-item" style="font-size: 20px">Starter Kits</li>
 									<li class="list-group-item" style="font-size: 20px">Syringes</li>
 									<li class="list-group-item" style="font-size: 20px">Test Strips (all manufacturers)</li>
+								</ul>								
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<ul>									
 									<li class="list-group-item" style="font-size: 20px">Stethoscopes</li>
 									<li class="list-group-item" style="font-size: 20px">Otoscopes</li>
 									<li class="list-group-item" style="font-size: 20px">Glucose Meters Strips</li>
@@ -252,6 +257,126 @@
 									<li class="list-group-item" style="font-size: 20px">Cane Holder / Clip</li>
 									<li class="list-group-item" style="font-size: 20px">Forearm Attachments</li>
 									<li class="list-group-item" style="font-size: 20px">Rubber Tips / Hand Grips</li>
+								</ul>
+							</div>
+						</div>
+						<div ng-show="selectedProduct.id==4">
+							<h3>Supplies</h3>
+							<div class="col-md-6 col-sm-6">
+								<ul class="list-group">
+									<li class="list-group-item" style="font-size: 20px">Bed Pans</li>
+									<li class="list-group-item" style="font-size: 20px">Leg Bags</li>
+									<li class="list-group-item" style="font-size: 20px">Pants(disposable)</li>
+									<li class="list-group-item" style="font-size: 20px">Bed-Wetting Alarms</li>
+									<li class="list-group-item" style="font-size: 20px">Mattress Covers</li>
+									<li class="list-group-item" style="font-size: 20px">Urinals</li>
+									<li class="list-group-item" style="font-size: 20px">Colostomy Pouches</li>
+									<li class="list-group-item" style="font-size: 20px">Flanges / Wafers</li>
+									<li class="list-group-item" style="font-size: 20px">Irrigation Products</li>								
+								</ul>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<ul class="list-group">
+									<li class="list-group-item" style="font-size: 20px">Ostomy Germicide</li>
+									<li class="list-group-item" style="font-size: 20px">Urinary Pouches</li>
+									<li class="list-group-item" style="font-size: 20px">Catheters (disposable & reusable)</li>
+									<li class="list-group-item" style="font-size: 20px">Underpads (disposable & reusable)</li>
+									<li class="list-group-item" style="font-size: 20px">Diapers</li>
+									<li class="list-group-item" style="font-size: 20px">Pants (reusable-cotton, mesh or waterproof)</li>
+									<li class="list-group-item" style="font-size: 20px">One and Two Piece Systems</li>
+									<li class="list-group-item" style="font-size: 20px">External Catheter Systems</li>
+									<li class="list-group-item" style="font-size: 20px">Inserts and Liners</li>									
+								</ul>
+							</div>								
+						</div>
+						<div ng-show="selectedProduct.id==5">
+							<div class="col-md-4 col-sm-4">				
+								<ul class="list-group">
+									<h3>Soft Supports</h3>
+									<li class="list-group-item" style="font-size: 20px">Abdominal Binders</li>
+									<li class="list-group-item" style="font-size: 20px">Clavicle Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Hernia Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Lumbo-Sacral Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Posture Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Ankle Braces / Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Elbow Braces</li>
+									<li class="list-group-item" style="font-size: 20px">Knee Braces / Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Obus Formes</li>
+									<li class="list-group-item" style="font-size: 20px">Tennis Elbow Braces</li>
+									<li class="list-group-item" style="font-size: 20px">Thumb Splints</li>
+									<li class="list-group-item" style="font-size: 20px">Cervical Collars</li>
+									<li class="list-group-item" style="font-size: 20px">Groin Straps</li>
+									<li class="list-group-item" style="font-size: 20px">Patella Stabilizers</li>
+									<li class="list-group-item" style="font-size: 20px">Sacro-Iliac Belts</li>
+									<li class="list-group-item" style="font-size: 20px">Thigh Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Wrist Bandages / Supports</li>
+								</ul>
+							</div>
+							<div class="col-md-4 col-sm-4">				
+								<ul class="list-group">
+									<h3>Foot Supports</h3>
+									<li class="list-group-item" style="font-size: 20px">Bunion Guards</li>
+									<li class="list-group-item" style="font-size: 20px">Heel Cushions / Cups</li>
+									<li class="list-group-item" style="font-size: 20px">Corn / Callus Pads</li>
+									<li class="list-group-item" style="font-size: 20px">Insoles</li>
+									<li class="list-group-item" style="font-size: 20px">Metatasal Pads</li>
+								</ul>
+							</div>
+							<div class="col-md-4 col-sm-4">					
+								<ul>
+									<h3>Rigid Supports</h3>
+									<li class="list-group-item" style="font-size: 20px">Wrist Splint</li>					
+									<li class="list-group-item" style="font-size: 20px">Philadelphia Collar</li>
+								</ul>
+							</div>
+						</div>
+						<div ng-show="selectedProduct.id==6">
+							<div class="col-md-5 col-sm-100 col-md-offset-3">					
+								<ul class="list-group">
+									<h3>Supplies</h3>
+									<li class="list-group-item" style="font-size: 20px">Bath Boards</li>
+									<li class="list-group-item" style="font-size: 20px">Bed Pans</li>
+									<li class="list-group-item" style="font-size: 20px">Shower / Bath Chairs</li>
+									<li class="list-group-item" style="font-size: 20px">Toilet Assist Products</li>
+									<li class="list-group-item" style="font-size: 20px">Tub Grab Bars</li>
+									<li class="list-group-item" style="font-size: 20px">Commodes</li>
+									<li class="list-group-item" style="font-size: 20px">Bath Sponges (long handled)</li>
+									<li class="list-group-item" style="font-size: 20px">Commodes Hand Held Showers</li>
+									<li class="list-group-item" style="font-size: 20px">Commodes Safety Mats and Strips</li>
+									<li class="list-group-item" style="font-size: 20px">Commodes Tub Transfer Benches</li>
+								</ul>
+							</div>							
+						</div>
+						<div ng-show="selectedProduct.id==7">
+							<div class="col-md-6 col-sm-6">				
+								<ul class="list-group">
+									<h3>Supplies</h3>
+									<li class="list-group-item" style="font-size: 20px">Eating, Grooming and Dressing Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Magnifiers</li>
+									<li class="list-group-item" style="font-size: 20px">Medicine Spoons, Syringes, Droppers</li>
+									<li class="list-group-item" style="font-size: 20px">Reachers and Grippers</li>
+									<li class="list-group-item" style="font-size: 20px">Hearing Aid Batteries</li>
+									<li class="list-group-item" style="font-size: 20px">Medical Bracelets</li>
+									<li class="list-group-item" style="font-size: 20px">Pill Dispensers, Crushers, Splitters</li>
+									<li class="list-group-item" style="font-size: 20px">Toilets Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Household Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Medication Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Reading / Writing Aids</li>
+									<li class="list-group-item" style="font-size: 20px">Lift Chair</li>
+								</ul>
+							</div>
+							<div class="col-md-6 col-sm-6">					
+								<ul>
+									<h3>Patient Room Equipment</h3>
+									<li class="list-group-item" style="font-size: 20px">Bedridden Hair Rinsers</li>
+									<li class="list-group-item" style="font-size: 20px">Blanket Supports</li>
+									<li class="list-group-item" style="font-size: 20px">Mattresses, Pads and Covers</li>
+									<li class="list-group-item" style="font-size: 20px">Traction Accessories</li>
+									<li class="list-group-item" style="font-size: 20px">Bed Rails</li>
+									<li class="list-group-item" style="font-size: 20px">Bed Wedges</li>
+									<li class="list-group-item" style="font-size: 20px">Beds-manual, semi and fully electric</li>
+									<li class="list-group-item" style="font-size: 20px">Cervical Pillows</li>
+									<li class="list-group-item" style="font-size: 20px">Mobile I.V. Stands</li>
 								</ul>
 							</div>
 						</div>
@@ -355,47 +480,109 @@
 		<section class="about text-center" id="anchor5">
 			<div class="container">
 				<div class="row">
-					<h2>Health Links</h2>                
-					<div class="col-md-4 col-sm-6">
-						<h3>Medical Graduated Compression Stockings</h3>
-						<ul>
-							<li>25 - 60mm compression</li>
-							<li>Knee length</li>
-							<li>Thigh length</li>
-							<li>Pantyhose</li>
-							<li>Maternity pantyhose</li>
+					<h2>Health Links</h2>
+					<div class="col-md-6 col-sm-6">				
+						<ul class="list-group">
+							<h3>Supplies</h3>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.cdnaids.ca">Aids Society, Canadian</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.alzheimer.ca">Alzheimers Society of Canada</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.asthma.ca">Asthma Society</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.aacanada.com">Alcoholics Anonymous</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.als.ca">ALS Society of Canada</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.arthritis.ca">Arthritis Society</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.autismsocietycanada.ca">Autism Society of America</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.alzheimercambridge.on.ca">Alzheimer Society of Cambridge</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.cdnaids.ca">Aids Society, Canadian</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.cdnaids.ca">Aids Society, Canadian</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.cdnaids.ca">Aids Society, Canadian</a>
+							</li>
+							<li class="list-group-item" style="font-size: 20px">
+								<a href="http://www.cdnaids.ca">Aids Society, Canadian</a>
+							</li>
 						</ul>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<h3>Support Stockings</h3>
+					<div class="col-md-6 col-sm-6">					
 						<ul>
-							<li>Off the shelf</li>
-							<li>12 - 25mm compression</li>						
+							<h3>Patient Room Equipment</h3>
+							<li class="list-group-item" style="font-size: 20px">Eating</li>
 						</ul>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<h3>T.E.D. Stockings</h3>
-						<ul>
-							<li>For bedridden patients</li>						
-						</ul>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<h3>Post-operative Compression Garments</h3>
-						<ul>
-							<li>Mammary</li>
-							<li>Plastic surgery</li>
-							<li>Post partum and post surgical</li>						
-						</ul>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<h3>Mastectomy</h3>
-						<ul>
-							<li>Brassieres</li>
-							<li>Breast Prosthesis</li>
-							<li>Fitting Accessories</li>
-							<li>Lymphadema Sleeve</li>						
-						</ul>
-					</div>
+					<span class="Main-Text" style="text-align: left">
+						
+						<a href="http://www.bcsc.ca">Breast Cancer Society of Canada</a>
+						
+						<a href="http://www.cerebralpalsycanada.com/">Cerebral Palsy (CP)</a>
+						<a href="http://www.chronicpaincanada.org">Chronic Pain Canada</a>
+						<a href="http://www.cysticfibrosis.ca">Cystic Fibrosis Foundation, Canadian</a>
+						<a href="http://www.ccfc.ca">Crohn's &amp; Colitis Foundation of Canada</a>
+						
+						<a href="http://www.cdss.ca">Down Syndrome Society, Canadian</a>
+						
+						<a href="http://www.nedic.ca">Eating Disorders Information Centre, National</a>
+						<a href="http://www.endometriosisassn.org">Endometriosis Association</a>
+						<a href="http://www.efa.org/">Epilespy Foundation</a>
+						
+						<a href="http://www.chs.ca/">Hearing Association, Canadian</a>
+						<a href="http://www.hsf.ca">Heart &amp; Stroke Foundation of Canada 
+						</a><a href="http://www.hemophilia.ca">Hemophilia Society, Canadian</a>
+						<a href="http://www.huntingtonsociety.ca">Huntington Society of Canada</a>
+						
+						<a href="http://www.sidscanada.org">Infant Deaths,Canadian Foundation</a>
+						<a href="http://www.ichelp.com">Interstitial Cystitis Society, Canadian</a>
+						&nbsp;
+						<a href="http://www.jdfc.ca">Juvenile Diabetes Foundation</a>
+						
+						<a href="http://www.kidney.ca">Kidney Foundation of Canada</a>
+						
+						<a href="http://www.liver.ca">Liver Foundation, Canada</a>
+						<a href="http://www.lupuscanada.org/index.html">Lupus Canada</a>
+						<a href="http://www.lung.ca">Lung Association, Canadian</a>
+						
+						<a href="http://www.meningitis.ca/en/">Meningitis Research Foundation of Canada
+						</a><a href="http://www.migraine.ca">Migraine Association of Canada
+						</a><a href="http://www.muscle.ca">Muscular Dystrophy Canada</a>
+						<a href="http://www.mssociety.ca">Multiple Sclerosis Society of Canada</a>
+						
+						<a href="http://www.AND.ca">Neurologically Disabled of Canada, Association for the</a>
+						<a href="http://www.ccfn.ca">Nutrition, Canadian Council of Food and</a>
+						&nbsp;
+						<a href="http://www.osteoporosis.ca">Osteoporosis&nbsp;</a>
+						
+						<a href="http://www.canparaplegic.org/">Paraplegic Association, Canadian</a>
+						<a href="http://www.psoriasissociety.org">Psoriasis, Society of Canada</a>
+						<a href="http://www.parkinson.ca">Parkinson Foundation of Canada</a>
+						
+						<a href="http://www.reyessyndrome.org">Reye’s Syndrome Foundation, National</a>
+						<a href="http://www.schizophrenia.ca">Schizophrenia Society of Canada</a>
+						<a href="http://www.stuttering.com/">Stuttering, National Center for</a>
+						<a href="http://www.sbhac.ca">Spina Bifida &amp; Hydrocephalus Association of Canada</a>
+						<a href="http://www.ccsa.ca">Substance Abuse, Canadian Centre on</a>
+						
+						<a href="http://www.thyroid.ca">Thyroid Foundation of Canada</a>
+						<a href="http://www.tourette.ca">Tourette Syndrome Foundation of Canada</a>
+						<a href="http://www.canadiantinn.com/">Tinnitus &amp; Hyperacusis Centre, Canadian</a>
+					</span>
 				</div>
 			</div>
 		</section><!-- end of Health links section -->
