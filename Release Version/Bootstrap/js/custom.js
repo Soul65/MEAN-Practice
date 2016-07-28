@@ -6,14 +6,22 @@ jQuery(document).ready(function () {
     //this code is for the gmap
     var map = new GMaps({
         el: '#map',
-        lat: -12.043333,
-        lng: -77.028333
+        lat: 43.3968395,
+        lng: -80.3613626
     });
+	
+	map.addMarker({
+		lat: 43.3968395,
+        lng: -80.3613626,
+		title: 'Preston Medical Pharmacy'
+	});
+	
+	map.setZoom(17);
 
 
     //this code is for smooth scroll and nav selector
     $(document).ready(function () {
-        $(document).on("scroll", onScroll);
+        //$(document).on("scroll", onScroll);
 
         //smoothscroll
         $('a[href^="#"]').on('click', function (e) {
@@ -32,12 +40,12 @@ jQuery(document).ready(function () {
                 'scrollTop': $target.offset().top + 2
             }, 500, 'swing', function () {
                 window.location.hash = target;
-                $(document).on("scroll", onScroll);
+                //$(document).on("scroll", onScroll);
             });
         });
     });
 
-    function onScroll(event) {
+    /* function onScroll(event) {
         var scrollPos = $(document).scrollTop();
         $('.navbar-default .navbar-nav>li>a').each(function () {
             var currLink = $(this);
@@ -49,7 +57,7 @@ jQuery(document).ready(function () {
                 currLink.removeClass("active");
             }
         });
-    }
+    } */
 
 
     //this code is for animation nav
