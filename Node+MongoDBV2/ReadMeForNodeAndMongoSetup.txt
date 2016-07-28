@@ -14,3 +14,7 @@
 (14) Run mongod --dbpath c:\node\nodetest1\data\
 (15) Run the server by typing mongo in cmd prompt 
 (16) Type use nodetest1 in mongodb command prompt
+
+
+Link for layout of tags: http://stackoverflow.com/questions/7921556/how-to-create-an-html-table-with-jade-iterating-an-array
+
