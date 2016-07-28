@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddEvent(name="addevent",method="post",action="/addevent")
+        input#inputEmployeeID(type="number", placeholder="eventid", name="employeeid")
+		input#inputEmployeeName(type="text", placeholder="eventname", name="employeename")
+		input#inputEmployeeSpeciality(type="text", placeholder="eventspeciality", name="employeespeciality")
+		input#inputEmployeeDescription(type="text", placeholder="eventdescription", name="employeedescription")
+		input#inputEmployeePhoneNumber(type="number", placeholder="eventphonenumber", name="employeephonenumber")
+        input#inputEmployeeEmail(type="text", placeholder="employeeemail", name="employeeemail")
+        button#btnSubmit(type="submit") submit

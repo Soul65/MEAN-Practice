@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1.
+        Employee List
+			div
+			   table
+				 thead
+					tr
+					  tbody
+						 each employee, i in employeelist
+					tr
+						td 
+							a(href='mailto:#{employee.employeemail}' + employee.employeeid) #{employee.employeename}
+   
+			
+				
