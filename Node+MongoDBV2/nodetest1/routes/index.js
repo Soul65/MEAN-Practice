@@ -79,6 +79,7 @@ router.post('/addemployee', function(req, res) {
     var db = req.db;
 
     // Get our form values. These rely on the "name" attributes
+	var employeeId = req.body.employeeid;
     var employeeName = req.body.employeename;
     var employeeEmail = req.body.employeeemail;
 
@@ -87,8 +88,9 @@ router.post('/addemployee', function(req, res) {
 
     // Submit to the DB
     collection.insert({
+		"employeeid" : employeeId,
         "employeename" : employeeName,
-        "email" : employeeEmail
+        "employeemail" : employeeEmail
     }, function (err, doc) {
         if (err) {
             // If it failed, return error

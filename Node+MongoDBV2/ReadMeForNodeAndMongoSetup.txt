@@ -13,3 +13,4 @@
 (13) Create a folder data in C:/node/nodetest1/data
 (14) Run mongod --dbpath c:\node\nodetest1\data\
 (15) Run the server by typing mongo in cmd prompt 
+(16) Type use nodetest1 in mongodb command prompt

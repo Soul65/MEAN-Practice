@@ -4,6 +4,7 @@ block content
     h1.
         Employee List
     ul
-        each user, i in employeelist
+        each employee, i in employeelist
             li
-                a(href="mailto:#{employee.email}")= employee.employeename
+                a(href="mailto:#{employee.employeemail}")= employee.employeename, {employee.employeeid}
+				
