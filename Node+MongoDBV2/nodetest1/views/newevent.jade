@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddEvent(name="addevent",method="post",action="/addevent")
+        input#inputEventId(type="number", placeholder="eventid", name="eventid")
+		input#inputEventName(type="text", placeholder="eventname", name="eventname")
+        button#btnSubmit(type="submit") submit
