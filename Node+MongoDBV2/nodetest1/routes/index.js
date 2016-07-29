@@ -126,18 +126,18 @@ router.post('/addevent', function(req, res) {
     var db = req.db;
 
     // Get our form values. These rely on the "name" attributes
-	var eventId = req.body.employeeid;
-    var employeeName = req.body.employeename;
-    var employeeEmail = req.body.employeeemail;
+	var eventId = req.body.eventid;
+    var eventName = req.body.eventname;
+    var eventEmail = req.body.eventmail;
 
     // Set our collection
-    var collection = db.get('employeecollection');
+    var collection = db.get('eventcollection');
 
     // Submit to the DB
     collection.insert({
-		"employeeid" : employeeId,
-        "employeename" : employeeName,
-        "employeemail" : employeeEmail
+		"eventid" : eventId,
+        "eventname" : eventName,
+        "eventmail" : eventEmail
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
@@ -145,7 +145,7 @@ router.post('/addevent', function(req, res) {
         }
         else {
             // And forward to success page
-            res.redirect("employeelist");
+            res.redirect("eventlist");
         }
     });
 });
