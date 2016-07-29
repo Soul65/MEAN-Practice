@@ -1,9 +1,9 @@
 extends layout
 
 block content
-	h1= title
-	form#formAddEmployee(name="addemployee",method="post",action="/addemployee")
-		input#inputEmployeeName(type="text", placeholder="employeename", name="employeename")
-		input#inputEmployeeEmail(type="text", placeholder="employeeemail", name="employeeemail")
+  h1= title
+  form#formAddEmployee(name="addemployee",method="post",action="/addemployee")
 		input#inputEmployeeID(type="text", placeholder="employeeid", name="employeeid")
-		button#btnSubmit(type="submit") submit
+        input#inputEmployeeName(type="text", placeholder="employeename", name="employeename")
+        input#inputEmployeeEmail(type="text", placeholder="employeeemail", name="employeeemail")
+        button#btnSubmit(type="submit") submit
