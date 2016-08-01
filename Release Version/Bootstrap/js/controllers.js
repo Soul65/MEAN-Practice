@@ -31,5 +31,9 @@ app.controller('ProductsCtrl', function($scope)
 	{id: 5, name: "Orthopedic Supports"},
 	{id: 6, name: "Bath Safety"},
 	{id: 7, name: "Daily Living Aids"}];
-	$scope.selectedProduct = 1;
+});
+
+$http.get("").success(function(data)
+{
+	$scope.events = data;
 });
