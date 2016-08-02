@@ -33,8 +33,20 @@ router.get('/employeelist', function(req, res) {
     });
 });
 
-/* GET Employeelist page. */
+/* GET Employeelist page.*/ 
 router.get('/eventlist', function(req, res) {
+    var db = req.db;
+    var collection = db.get('eventcollection');
+    collection.find({},{},function(e,docs){
+        /*res.render('eventlist', {
+            "eventlist" : docs
+        });*/
+		res.json(events)
+    });
+}); 
+
+/* GET Eventelist page to angularJS page. 
+router.get('/Bootstrap/index', function(req, res) {
     var db = req.db;
     var collection = db.get('eventcollection');
     collection.find({},{},function(e,docs){
@@ -42,7 +54,7 @@ router.get('/eventlist', function(req, res) {
             "eventlist" : docs
         });
     });
-});
+});*/
 
 /* GET New User page. */
 router.get('/newuser', function(req, res) {
@@ -148,5 +160,17 @@ router.post('/addevent', function(req, res) {
             res.redirect("eventlist");
         }
     });
+});
+
+/*Got a request*/
+app.get('/eventlist', function (req, res)
+{
+	console.log('I received a GET request');
+	eventcollection.find({}, function(err,events){
+		if(!err)
+		{
+				res.json(events);
+		}
+	});
 });
 module.exports = router;

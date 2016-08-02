@@ -69,5 +69,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+//Code to pass object to the view of angularJS
+app.get('/eventlist')
 
 module.exports = app;
