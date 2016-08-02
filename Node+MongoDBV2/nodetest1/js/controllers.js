@@ -33,7 +33,7 @@ app.controller('ProductsCtrl', function($scope)
 	{id: 7, name: "Daily Living Aids"}];
 });
 
-.controller('EventsController', function($scope,$http) 
+app.controller('EventsController', function($scope,$http) 
 {
 	$scope.events = [];
     
@@ -44,7 +44,7 @@ app.controller('ProductsCtrl', function($scope)
 	},function(err)
 	{
 		console.log(err);
-	}
+	});
 
    /* $scope.dataValues = function(){
 
