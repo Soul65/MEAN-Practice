@@ -31,7 +31,7 @@
 					<div class="col-xs-5 header-logo">
 						</br>
 						<i class="fa fa-medkit fa-6" style="font-size: 30px; margin-bottom: 10px; white-space: nowrap" 
-						aria-hidden="true">  Preston Medical Pharmacy</i>						
+						aria-hidden="true">Preston Medical Pharmacy</i>						
 					</div>
 
 					<div class="col-md-7">
@@ -41,14 +41,14 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="NavController" style="width: 900px">					      
 							  <ul class="nav navbar-nav navbar-right">
-								<li><a class="menu active" href="" ng-click="gotoAnchor(1)">Home</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(2)">About us</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(3)">Products</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(4)">Services</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(5)">Health Links</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(6)">Events</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(7)">Our Team</a></li>
-								<li><a class="menu" ng-click="gotoAnchor(8)">Contact Us</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" href="" ng-click="gotoAnchor(1)">Home</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(2)">About us</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(3)">Products</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(4)">Services</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(5)">Health Links</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(6)">Events</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(7)">Our Team</a></li>
+								<li class="col-md-3 col-xs-3"><a class="menu" ng-click="gotoAnchor(8)">Contact Us</a></li>
 							  </ul>
 							</div><!-- /navbar-collapse -->
 						  </div><!-- / .container-fluid -->
@@ -710,18 +710,18 @@
 							<tr>
 								<th>Name</th>
 								<th>Description</th>
-								<th>Time</th>
 								<th>Date</th>
+								<th>Time</th>
 								<th>Coordinator</th>
 							</tr>
-							
 							<tr>
-							
-								<td><ul>
-								<li ng-repeat="events in event">
-								{{event.eventid}}
-								</li>
-							</ul></td>
+								<td>
+									<ul>
+										<li ng-repeat="events in event">
+										{{events.eventid}}
+										</li>
+									</ul>
+								</td>
 								<td>{{events}}</td>
 								<td>{{events}}</td>
 								<td>{{events}}</td>
@@ -730,7 +730,7 @@
 							<tr></tr>
 						</table>
 					</div>
-			</div>
+				</div>
 			</div>
 		</section><!-- end of events section -->
 
