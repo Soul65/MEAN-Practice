@@ -1,39 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	res.sendFile('index.html', { root: path.join(__dirname, '../') });
+	//res.render('../index', { title: 'Express' });
 });
 
-/* GET Hello World page. */
-router.get('/helloworld', function(req, res) {
-    res.render('helloworld', { title: 'Hello, World!' });
-});
-
-/* GET Userlist page. */
-router.get('/userlist', function(req, res) {
-    var db = req.db;
-    var collection = db.get('usercollection');
-    collection.find({},{},function(e,docs){
-        res.render('userlist', {
-            "userlist" : docs
-        });
-    });
-});
-
-/* GET Employeelist page. */
-router.get('/employeelist', function(req, res) {
-    var db = req.db;
-    var collection = db.get('employeecollection');
-    collection.find({},{},function(e,docs){
-        res.render('employeelist', {
-            "employeelist" : docs
-        });
-    });
-});
-
-/* GET Employeelist page.*/ 
+/* GET eventlist page.*/ 
 router.get('/eventlist', function(req, res) {
     var db = req.db;
     var collection = db.get('eventcollection');
@@ -163,7 +138,7 @@ router.post('/addevent', function(req, res) {
 });
 
 /*Got a request*/
-app.get('/eventlist', function (req, res)
+/* app.get('/eventlist', function (req, res)
 {
 	console.log('I received a GET request');
 	eventcollection.find({}, function(err,events){
@@ -172,5 +147,5 @@ app.get('/eventlist', function (req, res)
 				res.json(events);
 		}
 	});
-});
+}); */
 module.exports = router;
