@@ -714,20 +714,14 @@
 								<th>Time</th>
 								<th>Coordinator</th>
 							</tr>
-							<tr>
-								<td>
-									<ul>
-										<li ng-repeat="events in event">
-										{{events.eventid}}
-										</li>
-									</ul>
-								</td>
-								<td>{{events}}</td>
-								<td>{{events}}</td>
-								<td>{{events}}</td>
-								<td>{{events}}</td>
+							<tr ng-repeat="event in events">
+								<td>{{event.id}}</td>
+								<td>{{event.name}}</td>
+								<td>{{event.description}}</td>
+								<td>{{event.date}}</td>
+								<td>{{event.time}}</td>
+								<td>{{event.coordinator}}</td>
 							</tr>
-							<tr></tr>
 						</table>
 					</div>
 				</div>
