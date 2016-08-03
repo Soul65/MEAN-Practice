@@ -33,7 +33,7 @@ app.controller('ProductsCtrl', function($scope)
 	{id: 7, name: "Daily Living Aids"}];
 });
 
-app.controller('EventsController', function($scope,$http) 
+/* app.controller('EventsController', function($scope,$http) 
 {
 	$scope.events = [];
     
@@ -46,12 +46,12 @@ app.controller('EventsController', function($scope,$http)
 		console.log(err);
 	});
 
-   /* $scope.dataValues = function(){
+   $scope.dataValues = function(){
 
         var mongo = require('../config/db.js');
 
         var collectionValues = db.eventcollection.find();
 
         return collectionValues;
-    };*/
-});
+    };
+});*/
