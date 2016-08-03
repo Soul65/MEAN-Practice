@@ -12,8 +12,10 @@
 (12) Navigate to: C:\Program Files\MongoDB\Server\3.2\bin
 (13) Create a folder data in C:/node/nodetest1/data
 (14) Run mongod --dbpath c:\node\nodetest1\data\
-(15) Run the server by typing mongo in cmd prompt 
-(16) Type use nodetest1 in mongodb command prompt
+(15) Open a new cmd prompt 
+(16) Navigate to: C:\Program Files\MongoDB\Server\3.2\bin
+(17) Run the server by typing mongo in cmd prompt 
+(18) Type use nodetest1 in mongodb command prompt
 
 
 Link for layout of tags: http://stackoverflow.com/questions/7921556/how-to-create-an-html-table-with-jade-iterating-an-array
