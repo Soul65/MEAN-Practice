@@ -74,7 +74,7 @@ app.use(function(err, req, res, next) {
 });
 
 //Code to pass object to the view of angularJS
-app.get('/', function (req, res) 
+/* app.get('/', function (req, res) 
 {
 	var db = req.db;
 	console.log("hello");
@@ -90,6 +90,6 @@ app.get('/', function (req, res)
 			res.json(events);
 		}
     });
-});
+}); */
 
 module.exports = app;
