@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1.
+		Employee List
+	ul
+		each employee, i in employeelist
+			li
+				a(href="mailto:#{employee.employeemail}")= employee.employeename
+				p 
+					#{employee.employeeid}: #{employeeid}

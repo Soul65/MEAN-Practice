@@ -1,0 +1,1 @@
+db.events.insert({"name" : "sample", "description" : "Hello", "date" : "08/03/16", "time" : "12:00", "coordinator" : "Matt"})
