@@ -24,8 +24,9 @@ router.get('/', function(req, res, next) {
 					console.log('No document(s) found with defined "find" criteria!');
 				}
 				
-				//Close connection
 				res.send(result);
+				
+				//Close connection				
 				db.close();
 			});
 		}

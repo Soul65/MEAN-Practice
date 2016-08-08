@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.js"></script>
 	<script type="text/javascript" src="js/controllers.js"></script>
 	<script type="text/javascript" src="app.js"></script>
@@ -28,19 +28,19 @@
 		<header class="top-header">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 col-xs-6 header-logo">
+					<div class="col-md-4 header-logo">
 						</br>
 						<i class="fa fa-medkit fa-6" style="font-size: 30px; margin-bottom: 10px; white-space: nowrap; text-align: left" 
 						aria-hidden="true"> Preston Medical Pharmacy</i>						
 					</div>
 
-					<div class="col-md-6 col-xs-6">
+					<div class="col-md-6">
 						<nav class="navbar navbar-default">
 						  <div class="container-fluid nav-bar">
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="NavController" style="width: 900px">					      
-							  <ul class="nav navbar-nav">
+							  <ul class="nav navbar-nav col-xs-11">
 								<li><a class="menu" html="" ng-click="gotoAnchor(1)">Home</a></li>
 								<li><a class="menu" html="" ng-click="gotoAnchor(2)">About us</a></li>
 								<li><a class="menu" html="" ng-click="gotoAnchor(3)">Products</a></li>
@@ -823,7 +823,7 @@
 						<div class="col-md-6 contact-form">
 							<h3>Leave us some feedback</h3>
 							<form class="form" action="MAILTO:louise_pmp@rogers.com" method="post" enctype="text/plain">
-								<textarea class="message" name="message" id="message" cols="30" rows="10" placeholder="Notes"></textarea>
+								<textarea class="message" name="message" id="message" cols="30" rows="10" style="resize: none"></textarea>
 								<input class="submit-btn" type="submit" value="SUBMIT">
 							</form>
 						</div>
@@ -844,7 +844,7 @@
 		<footer class="footer clearfix">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 footer-para">
+					<div class="col-xs-12 footer-para" style="text-align: center">
 						<p>&copy;2016 Preston Medical Pharmacy</p>
 					</div>
 					<!-- <div class="col-xs-6 text-right">

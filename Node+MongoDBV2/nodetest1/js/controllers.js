@@ -1,7 +1,7 @@
 var app = angular.module('pharmacyApp', []);
 app.run(['$anchorScroll', function($anchorScroll)
 {
-	$anchorScroll.yOffset = 50;
+	$anchorScroll.yOffset = 100;
 }])
 .controller('NavController', ['$anchorScroll', '$location', '$scope',
 	function($anchorScroll, $location, $scope)
@@ -45,13 +45,4 @@ app.controller('EventsController', function($scope, $http)
 	{
 		console.log(err);
 	});
-		
-   /* $scope.dataValues = function(){
-
-        var mongo = require('../config/db.js');
-
-        var collectionValues = db.eventcollection.find();
-
-        return collectionValues;
-    }; */
 });
