@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'BenchNine';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/BenchNine-regular/BenchNine-regular.eot');
+  src: url('../fonts/BenchNine-regular/BenchNine-regular.eot?#iefix') format('embedded-opentype'),
+       local('BenchNine Regular'),
+       local('BenchNine-regular'),
+       url('../fonts/BenchNine-regular/BenchNine-regular.woff2') format('woff2'),
+       url('../fonts/BenchNine-regular/BenchNine-regular.woff') format('woff'),
+       url('../fonts/BenchNine-regular/BenchNine-regular.ttf') format('truetype'),
+       url('../fonts/BenchNine-regular/BenchNine-regular.svg#BenchNine') format('svg');
+}
